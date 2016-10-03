@@ -14,4 +14,7 @@ bins = K13Bins()
 image = cv2.imread('Images/Images_CVL/test/0-0246-03-04.png', cv2.CV_LOAD_IMAGE_GRAYSCALE)
 ret, black_white = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
 
+print "With division"
 print bins.classify_division(black_white)
+print "Without division"
+print bins.classify_without_division(black_white)

@@ -12,6 +12,10 @@ class K13Bins:
         self.x_division = 2
         self.dictionary = dict()
 
+    def classify_without_division(self, image):
+        height, width = image.shape
+        return self.generate_histogram(image, 0, 0, width - 1, height - 1, height, width)
+
     def classify_division(self, image):
         """Return a classification vector of a binary image"""
         height, width = image.shape
